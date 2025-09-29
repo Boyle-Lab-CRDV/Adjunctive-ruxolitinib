@@ -92,7 +92,15 @@ mm.transform <- function(df_count, log = "log10") {
   return(df_count)
 }
 
-
+mm.impute <- function(df_count){
+  zero.cols <- df_count %>% 
+    select(where(~ any(. == 0))) %>% 
+    colnames()
+  
+  df_count[zero.cols] <- lapply(df_count[zero.cols], function(x) x + (min(x[x != 0])/2))
+  
+  return(df_count)
+}
 
 do.mm <- function(df_count, df_meta, fixed1, fixed2, random1, lm.opt = FALSE,
                   intercept = FALSE, contrast = FALSE, bts = 5000){
