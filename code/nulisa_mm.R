@@ -91,7 +91,7 @@ levels(meta_data$Timepoint)
 levels(meta_data$Treatment)
 
 nulisa_IvT <- do.mm2(df_count = mm.impute(count_data), df_meta = meta_data,
-                     fixed1 = "Timepoint", random1 = "ID", bts = 20)
+                     fixed1 = "Timepoint", random1 = "ID")
 saveRDS(nulisa_IvT, "nulisa_IvT.rds")
 
 # T vs TP
