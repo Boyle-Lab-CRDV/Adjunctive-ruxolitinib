@@ -1,4 +1,4 @@
-# Adjunctive ruxolitinib attenuates inflammation and enhances immunity in volunteers experimentally infected with Plasmodium falciparum
+# Adjunctive ruxolitinib attenuates inflammation and enhances immunity in volunteers experimentally infected with _Plasmodium falciparum_
 
 Described in https://www.science.org/doi/10.1126/scitranslmed.aea2531
 
