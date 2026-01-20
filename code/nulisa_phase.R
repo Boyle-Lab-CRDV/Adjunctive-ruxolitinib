@@ -14,6 +14,9 @@ library(tidyverse)
 library(corrplot)
 library(boot)
 
+--------------------------INPUT------------------------------------------
+# Input for this code can be found here: https://zenodo.org/records/15080321 
+
 # DATA FORMATTING -------------------------------------------------------------------------------------------------
 # Convert plate to long format
 plate1 <- rio::import("/Volumes/Boyle-Lab/Shared_Data/PROJECT_Rux/NUElisa/07-09-24 GHVAP-SI53-Malaria CHIM Study_Plate 1_Report.xlsx") %>% 
@@ -90,7 +93,7 @@ count_data2 <- nulisa_filter2 %>%
 meta_data2 <- nulisa_filter2 %>% 
   select(., -c(10:ncol(.)))
 
-levels(meta_data2$Day)
+levels(meta_data2$Days)
 levels(meta_data2$Phase)
 levels(meta_data2$Timepoint)
 levels(meta_data2$Treatment)
@@ -128,5 +131,6 @@ phase_sel.comb$mm_pred <- c(phase_selected$mm_pred, phase_sel_re$mm_pred)
 setwd("/Users/damian.oyong/Library/CloudStorage/OneDrive-BurnetInstitute/Burnet/Projects/Rux/NULISA/Phase/Phase_selected")
 saveRDS(phase_sel.comb, "phase_sel.comb.rds")
 
+writeLines(capture.output(sessionInfo()), "nulisa_phase_sessionInfo.txt")
 
 
