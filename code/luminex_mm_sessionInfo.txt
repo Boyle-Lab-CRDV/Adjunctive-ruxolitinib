@@ -1,0 +1,50 @@
+R version 4.3.2 (2023-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.3 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C               LC_TIME=en_US.UTF-8       
+ [4] LC_COLLATE=en_US.UTF-8     LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                  LC_ADDRESS=C              
+[10] LC_TELEPHONE=C             LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Etc/UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] stringr_1.5.1      ggpubr_0.6.1       ggplot2_3.5.2      tibble_3.3.0       emmeans_1.11.2    
+ [6] boot_1.3-31        cowplot_1.2.0      openxlsx_4.2.8.1   gtools_3.9.5       tidyr_1.3.1       
+[11] dplyr_1.1.4        lmeresampler_0.2.4 ggResidpanel_0.3.0 lme4_1.1-37        Matrix_1.6-4      
+
+loaded via a namespace (and not attached):
+ [1] Rdpack_2.6.4            bitops_1.0-9            remotes_2.5.0           readxl_1.4.5           
+ [5] rlang_1.1.4             magrittr_2.0.3          qqconf_1.3.2            snakecase_0.11.1       
+ [9] rio_1.2.3               compiler_4.3.2          mgcv_1.9-3              systemfonts_1.2.3      
+[13] pbmcapply_1.5.1         vctrs_0.6.5             reshape2_1.4.4          pkgconfig_2.0.3        
+[17] crayon_1.5.3            fastmap_1.2.0           backports_1.5.0         labeling_0.4.3         
+[21] HLMdiag_0.5.1           caTools_1.18.3          pracma_2.4.4            nloptr_2.2.1           
+[25] ragg_1.4.0              purrr_1.2.1             jsonlite_2.0.0          broom_1.0.9            
+[29] parallel_4.3.2          R6_2.6.1                stringi_1.8.4           RColorBrewer_1.1-3     
+[33] car_3.1-3               cellranger_1.1.0        lubridate_1.9.4         estimability_1.5.1     
+[37] Rcpp_1.0.13             iterators_1.0.14        R.utils_2.13.0          splines_4.3.2          
+[41] timechange_0.3.0        tidyselect_1.2.1        rstudioapi_0.17.1       abind_1.4-8            
+[45] doParallel_1.0.17       codetools_0.2-20        lattice_0.22-6          plyr_1.8.9             
+[49] opdisDownsampling_1.0.1 withr_3.0.2             coda_0.19-4.1           zip_2.3.3              
+[53] ggdist_3.3.3            pillar_1.11.0           carData_3.0-5           foreach_1.5.2          
+[57] reformulas_0.4.1        distributional_0.6.0    plotly_4.11.0           generics_0.1.4         
+[61] nlmeU_0.71.7            scales_1.4.0            minqa_1.2.8             xtable_1.8-4           
+[65] glue_1.8.0              janitor_2.2.1           lazyeval_0.2.2          tools_4.3.2            
+[69] robustbase_0.99-4-1     data.table_1.17.8       ggsignif_0.6.4          forcats_1.0.0          
+[73] mvtnorm_1.3-3           grid_4.3.2              rbibutils_2.3           diagonals_6.4.0        
+[77] nlme_3.1-168            Formula_1.2-5           cli_3.6.3               textshaping_1.0.1      
+[81] twosamples_2.0.1        viridisLite_0.4.2       gtable_0.3.6            DEoptimR_1.1-4         
+[85] R.methodsS3_1.8.2       rstatix_0.7.2           digest_0.6.36           qqplotr_0.0.7          
+[89] htmlwidgets_1.6.4       farver_2.1.2            R.oo_1.27.1             htmltools_0.5.8.1      
+[93] lifecycle_1.0.4         httr_1.4.7              statmod_1.5.0           MASS_7.3-61            
