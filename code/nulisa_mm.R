@@ -14,6 +14,9 @@ library(tidyverse)
 library(corrplot)
 library(boot)
 
+--------------------------INPUT------------------------------------------
+# Input for this code can be found here: https://zenodo.org/records/15080321 
+
 # DATA FORMATTING -------------------------------------------------------------------------------------------------
 # Convert plate to long format
 plate1 <- rio::import("/Volumes/Boyle-Lab/Shared_Data/PROJECT_Rux/NUElisa/07-09-24 GHVAP-SI53-Malaria CHIM Study_Plate 1_Report.xlsx") %>% 
@@ -113,4 +116,6 @@ levels(meta_data$Treatment)
 nulisa_TvTP <- do.mm(df_count = mm.impute(count_data), df_meta = meta_data, contrast = TRUE,
                      fixed1 = "Timepoint", fixed2 = "Treatment", random1 = "ID")
 saveRDS(nulisa_TvTP, "nulisa_TvTP.rds")
+
+writeLines(capture.output(sessionInfo()), "nulisa_mm_sessionInfo.txt")
 
