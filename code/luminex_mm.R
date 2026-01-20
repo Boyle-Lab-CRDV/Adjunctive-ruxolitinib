@@ -19,7 +19,7 @@ library(stringr)
 # IMPORTANT: Factorise your fixed effect variables, use factor(df, levels = c())
 # With mixed model, all factors within a fixed effect variable will be compared to the first factor.
 # E.g. if levels(meta$fixed1) = "A" "B" "C", output will show comparisons vs "A"
-
+# Input file is the S4 supplementary materials of Webster et al., Sci. Transl. Med. 17, eaea2531 (2025)
 
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) # This only works if you are using RStudio
 
@@ -652,3 +652,4 @@ super.TP$mm_res %>%
   facet_wrap(~term, scales = "free")
 ggsave(filename = paste0(plot.dir,"/Volcano_TX_fdr.pdf"), width = 12, height = 6)
 
+writeLines(capture.output(sessionInfo()), "luminex_mm_sessionInfo.txt")
