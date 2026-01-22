@@ -24,13 +24,13 @@ library(stringr)
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) # This only works if you are using RStudio
 
 ### Import datafile
-df <- readRDS("/Volumes/boyle-lab/Shared_Data/PROJECT_Rux/Luminex/RAW_uRBC_pRBC_supernatant/supernatant_formatted_4Sep25.rds") %>% 
+df <- readRDS("supernatant_formatted_4Sep25.rds") %>% 
   select(., c(Name, R_Number, SampleID, Stim, Day, Treatment), everything()) %>% 
   rename_with(~ str_replace_all(., "[/-]", "_")) %>%     # replace / or - with _
   rename_with(~ str_replace_all(., "\\(LTA\\)", "")) %>% # remove (LTA)
   rename_with(~ str_replace_all(., "__+", "_"))          # collapse any double underscores if created
 
-pt_data <- rio::import("/Users/damian.oyong/Library/CloudStorage/OneDrive-BurnetInstitute/Burnet/Projects/Rux/Luminex/patient_data.xlsx") %>% 
+pt_data <- rio::import("/metadata/patient_data.xlsx") %>% 
   select(ID, Day, Timepoint) %>% 
   rename(SampleID = ID)
 
